@@ -25,7 +25,7 @@ struct TreeNodeElementId {
     std::size_t operator()(const TreeNodeElementId& key) const {
       std::size_t h1 = std::hash<int>()(key.tree_id);
       std::size_t h2 = std::hash<int>()(key.node_id);
-      return h1 ^ h2;
+      return 490769 * h1 + h2;
     }
   };
 };
